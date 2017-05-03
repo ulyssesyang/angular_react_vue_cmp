@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Forum">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ReactJS and Flux</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <section ng-controller="AnswersController as Answers">
+        <div>
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../index.html">Angular vs React vs Vue</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li><a href="../angular1.x/index.html">Angularjs</a></li>
+                    <li><a href="../reactjs/index.html">Reactjs</a></li>
+                    <li><a href="../vuejs/index.html">Vuejs</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div>
+                    <h1>What is Angular?</h1>
+                    <p>
+                        Something about Angular...
+                    </p>
+                </div>
+                <hr />
+                <div ng-repeat="(id, ans) in Answers.answers">
+                    <answer />
+                </div>
+                <hr />
+                <h4>Add an answer</h4>
+                <div>
+                    <textarea class="col-md-6 col-xs-8" ng-model="Answers.newAnswerText"></textarea> &nbsp;
+                    <input type="button" class="btn btn-primary" value="Add" ng-click="Answers.addAnswer()" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/services/answer.service.js"></script>
+    <script src="app/directives/answer.directive.js"></script>
+    <script src="app/answers/answers.controller.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
