@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 </head>
 
-<body ng-app="AngularApp">
-    <section ng-controller="AnswersController as Answers">
+<body>
+    <section>
         <div>
             <nav class="navbar navbar-default">
                 <div class="navbar-header">
@@ -21,32 +21,18 @@
                     <li><a href="../vuejs/index.html">Vuejs</a></li>
                 </ul>
             </nav>
-            <div class="container">
-                <div>
-                    <h1>What is Angular?</h1>
-                    <p>
-                        Something about Angular...
-                    </p>
-                </div>
-                <hr />
-                <div ng-repeat="(id, ans) in Answers.answers">
-                    <answer />
-                </div>
-                <hr />
-                <h4>Add an answer</h4>
-                <div>
-                    <textarea class="col-md-6 col-xs-8" ng-model="Answers.newAnswerText"></textarea> &nbsp;
-                    <input type="button" class="btn btn-primary" value="Add" ng-click="Answers.addAnswer()" />
-                </div>
+            <div class="container" ng-app="angularApp" ng-controller="appController">
+                <bars-view></bars-view>
             </div>
         </div>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
-    <script src="app/app.module.js"></script>
-    <script src="app/services/answer.service.js"></script>
-    <script src="app/directives/answer.directive.js"></script>
-    <script src="app/answers/answers.controller.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/service/service.js"></script>
+    <script src="app/directive/directive.js"></script>
+    <script src="app/controller/controller.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
