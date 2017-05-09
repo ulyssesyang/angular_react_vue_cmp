@@ -22,7 +22,8 @@
                 </ul>
             </nav>
             <div class="container" ng-app="angularApp" ng-controller="appController">
-                <bars-view width="500" height="105"></bars-view>
+                <bars-view width="500" height="105" style="display: table-cell; vertical-align: middle"></bars-view>
+                <donut-view width="300" height="300" style="display: table-cell"></donut-view>
             </div>
         </div>
     </section>
@@ -31,7 +32,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app/app.js"></script>
     <script src="app/service/service.js"></script>
-    <script src="app/directive/directive.js"></script>
+    <script src="app/directive/barsView.js"></script>
+    <script src="app/directive/donutView.js"></script>
     <script src="app/controller/controller.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
