@@ -1,0 +1,17 @@
+{
+    "Angular1.x": {
+        "id": 1,
+        "Name": "Angular1.x",
+        "Value": 50
+    },
+    "Reactjs": {
+        "id": 2,
+        "Name": "Reactjs",
+        "Value": 30
+    },
+    "Vuejs": {
+        "id": 3,
+        "Name": "Vuejs",
+        "Value": 10
+    }
+}
