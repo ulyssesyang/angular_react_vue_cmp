@@ -20,14 +20,16 @@
                     <li class="active"><a href="../vuejs/index.html">Vuejs</a></li>
                 </ul>
             </nav>
-            <div class="container">
-
+            <div class="container" id="vueApp">
+                <bars-view data="data" width="500" height="105" style="display: table-cell; vertical-align: middle"></bars-view>
+                <donut-view data="data" width="300" height="300" style="display: table-cell"></donut-view>
+                <details-view data="data" width="300"></details-view>
             </div>
         </div>
     </section>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
+    <script src="https://unpkg.com/vue" charset="utf-8"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
