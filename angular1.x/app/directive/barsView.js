@@ -32,18 +32,14 @@ angular
                     .append("svg")
                     .attr({width: width, height: height});
 
-                var max,
-                    rect,
-                    text;
-
                 var renderChart = function (data) {
                     // set max range
-                    max = d3.max(data, function (d) {
+                    var max = d3.max(data, function (d) {
                         return d.Value;
                     });
 
                     // render bar
-                    rect = svg
+                    var rect = svg
                         .selectAll('rect')
                         .data(data);
 
@@ -81,7 +77,7 @@ angular
                             return d.Value / (max / width);
                         });
                     // render text
-                    text = svg
+                    var text = svg
                         .selectAll('text')
                         .data(data);
 
@@ -110,15 +106,6 @@ angular
                         });
                     });
 
-                }
-
-                var updataChart = function (data) {
-                    rect = svg
-                        .selectAll("rect")
-                        .data(data, function (d) {
-                            return d.id;
-                        });
-                    console.log(rect);
                 }
 
                 $scope.$on('data finish load', function (event, args) {

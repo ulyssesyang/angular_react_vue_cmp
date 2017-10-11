@@ -65,8 +65,8 @@ angular
                     g
                         .append("path")
                         .attr("d", arc)
-                        .style("fill", function (d) {
-                            return colors(d.data.Value);
+                        .style("fill", function (d, i) {
+                            return colors(d.data.id);
                         });
 
                     // add click listener
@@ -85,25 +85,6 @@ angular
                         .attr({fill: '#fff', dx: "-.15em"})
                         .text(function (d) {
                             return d.data.Value
-                        });
-                }
-
-                var updateDonutChart = function (data) {
-                    var path = svg
-                        .selectAll("path")
-                        .data(data, function (d) {
-                            return d.id;
-                        });
-                    console.log(path);
-                    path
-                        .transition()
-                        .duration(750)
-                        .attrTween('d', function () {
-                            var i = d3.interpolate(this._current, a);
-                            this._current = i(0);
-                            return function (t) {
-                                return arc(i(t));
-                            };
                         });
                 }
 
